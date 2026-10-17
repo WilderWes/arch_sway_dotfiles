@@ -1,0 +1,4 @@
+# https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
+[user]
+	name = WilderWes
+	email = westonpreising@gmail.com

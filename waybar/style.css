@@ -1,0 +1,145 @@
+/* Tokyo Night Colors */
+@define-color bg       #1a1b26;
+@define-color bg_dark  #16161e;
+@define-color fg       #c0caf5;
+@define-color selection #292e42;
+@define-color comment  #565f89;
+@define-color red      #f7768e;
+@define-color orange   #ff9e64;
+@define-color yellow   #e0af68;
+@define-color green    #9ece6a;
+@define-color cyan     #7dcfff;
+@define-color blue     #7aa2f7;
+@define-color purple   #bb9af7;
+
+* {
+    font-family: 'JetBrains Mono', 'Font Awesome 7 Free', 'Font Awesome 7 Brands', monospace;
+    font-size: 12px;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background-color: rgba(26, 27, 38, 0.85); /* Tokyo Night Bg with alpha */
+    border-bottom: 2px solid @selection;
+    color: @fg;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: @fg;
+    box-shadow: inset 0 -3px transparent;
+}
+
+#workspaces button:hover {
+    background: @selection;
+    box-shadow: inset 0 -3px @blue;
+}
+
+#workspaces button.focused {
+    background-color: @selection;
+    color: @blue;
+    box-shadow: inset 0 -3px @blue;
+}
+
+#workspaces button.urgent {
+    background-color: @red;
+    color: @bg;
+}
+
+#mode, #clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #tray, #idle_inhibitor, #scratchpad {
+    padding: 0 10px;
+    margin: 4px 0px;
+    color: @fg;
+}
+
+/* Individual Module Colors */
+#clock {
+    color: @purple;
+    font-weight: bold;
+}
+
+#battery {
+    color: @green;
+}
+
+#battery.warning {
+    color: @orange;
+}
+
+#battery.critical:not(.charging) {
+    color: @red;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: @red;
+        color: @bg;
+    }
+}
+
+#cpu {
+    color: @cyan;
+}
+
+#memory {
+    color: @purple;
+}
+
+#backlight {
+    color: @yellow;
+}
+
+#network {
+    color: @blue;
+}
+
+#network.disconnected {
+    color: @red;
+}
+
+#pulseaudio {
+    color: @orange;
+}
+
+#pulseaudio.muted {
+    color: @comment;
+}
+
+#temperature {
+    color: @cyan;
+}
+
+#temperature.critical {
+    color: @red;
+}
+
+#idle_inhibitor {
+    color: @blue;
+}
+
+#tray {
+    color: @fg;
+}
+
+#scratchpad {
+    background: @selection;
+    color: @fg;
+}
+
+#language {
+    color: @cyan;
+    padding: 0 5px;
+}
