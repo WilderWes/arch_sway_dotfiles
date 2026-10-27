@@ -32,9 +32,11 @@ set -x GOPATH "$XDG_DATA_HOME/go"
 set -x PATH "$PATH:$GOPATH/bin"
 
 # robotics class
-set -x PYTHONPATH "$HOME/csci536A_hri/nao_sdk/pynaoqi-python2.7-2.8.7.4-linux64-20210819_141148/lib/python2.7/site-packages/"
-set -x QI_SDK_PREFIX "$HOME/csci536A_hri/nao_sdk/pynaoqi-python2.7-2.8.7.4-linux64-20210819_141148/"
+set -x PYTHONPATH "$HOME/Projects/csci536A_hri/nao_sdk/lib/python2.7/site-packages/"
+set -x QI_SDK_PREFIX "$HOME/Projects/csci536A_hri/nao_sdk/"
 set -x OPENAI_API_KEY ""
+set -x PEERBOTS_API_KEY ""
+set -x PEERBOTS_USERNAME ""
 
 # yazi
 function y
