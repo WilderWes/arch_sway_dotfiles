@@ -1,0 +1,86 @@
+version: 3
+theme: "Catppuccin Mocha"
+margin: 0
+transparent_background: false
+pdf_scale: 1
+pdf_pan_shift: 0
+pdf_render_mode: scroll
+pdf_page_layout_mode: single
+epub_column_mode: single
+pdf_enabled: true
+pdf_settings_configured: true
+justify_text: false
+invert_scroll_direction: false
+book_sort_order: by_name
+
+# ============================================================================
+# Lookup Command
+# ============================================================================
+# Shell command to run when you press Space+l on selected text.
+# Use {} as a placeholder for the selected word. If no {} is present,
+# the selected text is appended as a shell-escaped argument.
+#
+# lookup_display controls how output is shown:
+#   popup          - capture stdout and show in a scrollable popup (default)
+#   fire_and_forget - spawn command and move on (e.g., open a browser)
+#
+# Example: CLI dictionary (output shown in popup)
+#   lookup_command: "dict {}"
+#   lookup_display: popup
+#
+# Example: macOS Dictionary.app
+#   lookup_command: "open dict://{}"
+#   lookup_display: fire_and_forget
+#
+# Example: online dictionary in browser
+#   lookup_command: "open 'https://www.merriam-webster.com/dictionary/{}'"
+#   lookup_display: fire_and_forget
+
+# ============================================================================
+# SyncTeX inverse search: editor command to run when you Ctrl+click,
+# secondary-click, or press 'gd' on a PDF rendered from LaTeX.
+# Placeholders: {file}, {line}, {column}
+#
+# Example: neovim via remote socket
+#   synctex_editor: "nvim --server /tmp/nvim.sock --remote-send '<C-\\><C-n>:e {file}<CR>:{line}<CR>'"
+#
+# Example: open in new terminal nvim
+#   synctex_editor: "nvim +{line} {file}"
+
+# ============================================================================
+# Custom Themes
+# ============================================================================
+# Add your own themes below. Find Base16 themes at:
+# https://github.com/tinted-theming/schemes
+#
+# To add a theme, uncomment and edit the lines below:
+#
+custom_themes:
+  - scheme: "Tokyo Night"
+    author: "folke (tokyonight.nvim), adapted for bookokrat"
+    base00: "1A1B26" # bg
+    base01: "16161E" # bg_dark = folke's bg_popup / bg_statusline / bg_float
+    base02: "283457" # bg_visual = blend(blue0, 0.4) over bg
+    base03: "565F89" # comment
+    base04: "A9B1D6" # fg_dark = folke's fg_sidebar
+    base05: "C0CAF5" # fg
+    base06: "C0CAF5" # fg
+    base07: "C0CAF5" # fg = folke's terminal white_bright (no brighter fg in Night)
+    base08: "F7768E" # red (terminal red)
+    base09: "FF9E64" # orange
+    base0A: "E0AF68" # yellow (terminal yellow, folke's warning)
+    base0B: "9ECE6A" # green (terminal green)
+    base0C: "7DCFFF" # cyan (terminal cyan)
+    base0D: "7AA2F7" # blue (terminal blue)
+    base0E: "BB9AF7" # magenta (terminal magenta)
+    base0F: "DB4B4B" # red1 = folke's error color
+
+nav_panel_width: null
+lookup_command: null
+lookup_display: popup
+synctex_editor: null
+
+epub_image_size: adaptive
+pdf_show_link_underlines: false
+show_inline_annotations: true
+zen_hide_border: false
