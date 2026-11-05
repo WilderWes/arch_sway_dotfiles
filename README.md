@@ -112,8 +112,8 @@ Arch (`core`, `extra`, `multilib`) + [CachyOS repos](https://wiki.cachyos.org/fe
 
 ## Terminal & Shell
 
-- [kitty](https://github.com/kovidgoyal/kitty) -- JetBrains Mono and Tokyo Night theme
-  - [ghostty](https://ghostty.org/download) -- JetBrains Mono and Tokyo Night theme
+- [kitty](https://github.com/kovidgoyal/kitty) -- JetBrains Mono NL and Tokyo Night theme
+  - [ghostty](https://ghostty.org/download) -- JetBrains Mono NL and Tokyo Night theme
 - [fish](https://fishshell.com/)
 - [starship](https://starship.rs/) -- terminal prompt
 - [eza](https://github.com/eza-community/eza) -- ls replacement
